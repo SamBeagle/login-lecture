@@ -24,6 +24,12 @@ const process = {
        
         return res.json(response);
     },
+    register : (req, res) => {
+        const user = new User(req.body); //req.body는 클라이언트가 던져준 인자
+        const response = user.register();
+       
+        return res.json(response);
+    }
 };
 
 module.exports = {
